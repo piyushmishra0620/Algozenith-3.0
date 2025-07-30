@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarvelPedia</title>
-    <link rel="icon" href="./captain_america_shield.jpg">
+    <link rel="icon" href="./captain_america_shield.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         * {
@@ -334,7 +334,6 @@
             });
     });
 
-    // Function for handling user search
     searchBtn.addEventListener('click', function () {
         const inputVal = inputBox.value.trim();
         if (inputVal.length < 1) {
@@ -342,7 +341,6 @@
             return;
         }
 
-        // Show the secondary loader
         showContainer.innerHTML = '';
         const loader2 = document.getElementById('loader2');
         loader2.style.position = 'fixed';
@@ -387,7 +385,6 @@
                     });
                 }
                 
-                // Hide loader and restore main content view
                 loader2.style.display = 'none';
                 document.getElementById('main').style.zIndex = '1';
                 document.getElementById('main').style.opacity = '1';
@@ -397,8 +394,7 @@
             .catch((error) => {
                 console.error("Error during search:", error);
                 alert("A server-side error occurred. Please try searching again.");
-                // Also hide loader on error
-                document.getElementById('loader2').style.display = 'none'; // Corrected this line
+                document.getElementById('loader2').style.display = 'none'; 
                 document.getElementById('main').style.zIndex = '1';
                 document.getElementById('main').style.opacity = '1';
                 document.getElementById('background').style.zIndex = '-1';
@@ -406,7 +402,7 @@
             });
     });
 
-    // Allow search on pressing Enter key
+    
     inputBox.addEventListener('keyup', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
