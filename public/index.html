@@ -23,7 +23,7 @@
     body {
       min-height: 100vh;
       width: 100%;
-      background-image: url(new\ web.jpg);
+      background-image: URL("./new web.jpg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -178,21 +178,6 @@
       max-width: 600px;
     }
 
-    .foot .icons {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .foot .icons i {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
-      background-color: #363D73;
-    }
-
     @media (max-width: 992px) {
 
       .nav-bar nav {
@@ -218,17 +203,6 @@
         align-items: center;
         gap: 1.5rem;
       }
-
-
-      .foot {
-        width: 100%;
-      }
-
-      .foot .icons {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-      }
     }
 
 
@@ -252,16 +226,6 @@
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
-      }
-
-      .foot {
-        width: 100%;
-      }
-
-      .foot .icons {
-        width: 100%;
-        display: flex;
-        justify-content: center;
       }
     }
 
@@ -324,7 +288,7 @@
   <header>
 
     <div class="nav-bar">
-      <img src="marvel-logo.svg" alt="Marvel Logo">
+      <img src="marvel-logo.png" alt="Marvel Logo">
       <nav>
         <ul>
           <li><a href="#" id="eventsNav">EVENTS</a></li>
@@ -374,12 +338,6 @@
           inspired generations. Whether you are here to revisit iconic storylines or dive into new adventures, we've got
           you covered! Step into this iconic Marvel collection and discover your favourites!</p>
       </div>
-      <div class="foot">
-        <div class="icons">
-          <i class="fa-brands fa-github fa-2x"></i>
-          <i class="fa-brands fa-linkedin fa-2x"></i>
-        </div>
-      </div>
       <p>Copyright © 2025 All rights reserved by ALGOZENITH<i class="fa-solid fa-heart" style="color: brown;"></i></p>
     </div>
   </div>
@@ -412,36 +370,26 @@
       event.preventDefault();
       document.body.classList.add('loading-active');
       loaderOverlay.style.display = 'flex';
-
-      setTimeout(() => {
-
-        document.body.classList.remove('loading-active');
-
-        loaderOverlay.style.display = 'none';
-
-        console.log('Loading complete!');
-
-      }, 700);
     }
 
 
     clickableElements.forEach(element => {
       element.addEventListener('click', showLoader);
     });
-    document.getElementById('fanzone').addEventListener('click', function () {
-      window.location.href = '/fan-zone';
+    document.getElementById('fanzone').addEventListener('click', function (e) {
+      showLoader(e);window.location.href = '/fan-zone';
     });
-    document.getElementById('fanZone').addEventListener('click', function () {
-      window.location.href = '/fan-zone';
+    document.getElementById('fanZone').addEventListener('click', function (e) {
+      showLoader(e);window.location.href = '/fan-zone';
     });
-    document.getElementById('fanzoneDM').addEventListener('click', function () {
-      window.location.href = '/fan-zone';
+    document.getElementById('fanzoneDM').addEventListener('click', function (e) {
+      showLoader(e);window.location.href = '/fan-zone';
     });
-    document.getElementById('about').addEventListener('click', function () {
-      window.location.href = '/about-us';
+    document.getElementById('about').addEventListener('click', function (e) {
+      showLoader(e);window.location.href = '/about-us';
     });
-    document.getElementById('aboutDM').addEventListener('click', function () {
-      window.location.href = '/about-us';
+    document.getElementById('aboutDM').addEventListener('click', function (e) {
+     showLoader(e); window.location.href = '/about-us';
     });
     document.getElementById('events').addEventListener('click', function (e) {
       showLoader(e); window.location.href = '/events';
@@ -469,9 +417,6 @@
     });
     document.getElementById('comicsNav').addEventListener('click', function (e) {
       showLoader(e); window.location.href = '/comics';
-    });
-    document.getElementById('fanZone').addEventListener('click', function (e) {
-      showLoader(e); window.location.href = '/fan-zone';
     });
   </script>
 </body>
