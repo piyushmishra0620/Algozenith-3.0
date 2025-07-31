@@ -41,6 +41,8 @@ A Marvel-Comics website featuring all characters, comics, stories, series and al
 - 🌐 [Git](https://git-scm.com/)
 - 📄 .env file - with environment variables like port
 - 🦸‍♂🔗[Marvel API](https://developer.marvel.com/)
+- [![npm version](https://img.shields.io/npm/v/md5.svg)](https://www.npmjs.com/package/md5)
+
 
 ---
 
@@ -58,6 +60,16 @@ A Marvel-Comics website featuring all characters, comics, stories, series and al
 #PRIVATE_API= your private api key .
 #5) Start your server locally .
 `nodemon` server.js
+```
+---
+
+## 🕷 Marvel API
+
+```bash
+#1) Create an account in Marvel Developers and get the public API and private API.
+#2) Store the private API in the .env file and don't expose it on the frontend.
+/// The query string of the marvel api requires three necessary parameters, i.e, the ts(timestamp) key,the hash key and the public api key , with the keys ts, hash, apikey respectively.
+#3) So, use the private key on the backend to generate the hash key. One such way to generate 
 ```
 ---
 
