@@ -41,7 +41,7 @@ A Marvel-Comics website featuring all characters, comics, stories, series and al
 - 🌐 [Git](https://git-scm.com/)
 - 📄 .env file - with environment variables like port
 - 🦸‍♂🔗[Marvel API](https://developer.marvel.com/)
-- [![npm version](https://img.shields.io/npm/v/md5.svg)](https://www.npmjs.com/package/md5)
+- [![npm version md5](https://img.shields.io/npm/v/md5.svg)](https://www.npmjs.com/package/md5)
 
 
 ---
