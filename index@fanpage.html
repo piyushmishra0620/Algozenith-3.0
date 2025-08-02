@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marvel Fan Zone</title>
+  <link rel="stylesheet" href="style@fanpage.css">
+</head>
+
+<body>
+    <div class="overlay"></div>
+  <header>
+    <h1>Marvel Fan Zone</h1>
+  </header>
+
+  <section class="gallery">
+    <h2>🎨 Fan Art Gallery</h2>
+    <div class="images">
+      <img src="https://cdn.shopify.com/s/files/1/1140/8354/files/1._Paint_Your_Superhero_on_Canvas_480x480.jpg?v=1635259672" alt="Fan Art 1">
+      <img src="https://i.pinimg.com/736x/ce/a8/0b/cea80b8bb34f3dafe36244e54a6185ef.jpg" alt="Fan Art 2">
+      <img src="https://artofentertainment.com/cdn/shop/collections/Spiderman_vs._the_Sinister_Six.jpg?v=1675796461" alt="Fan Art 3">
+      <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/07/fan-art-fox-characters-deadpool-3.jpg" alt="Fan Art 4">
+    </div>
+  </section>
+
+  <section class="poll">
+    <h2>🗳️ Who's Your Favorite Marvel Character?</h2>
+    <form id="pollForm">
+      <label><input type="radio" name="character" value="Iron Man"> Iron Man</label><br>
+      <label><input type="radio" name="character" value="Spider-Man"> Spider-Man</label><br>
+      <label><input type="radio" name="character" value="Captain America"> Captain America</label><br>
+      <label><input type="radio" name="character" value="Thor"> Thor</label><br>
+      <label><input type="radio" name="character" value="Hulk"> Hulk</label><br>
+      <label><input type="radio" name="character" value="Scarlet Witch"> Scarlet Witch</label><br>
+      <label><input type="radio" name="character" value="Wolverine"> Wolverine</label><br>
+      <label><input type="radio" name="character" value="Black Panther"> Black Panther</label><br>
+      <button type="button" onclick="submitPoll()">Vote</button>
+    </form>
+    <p id="pollResult"></p>
+  </section>
+
+  <section class="quiz">
+    <div class="center">
+    <h2>🧠 Marvel Quiz</h2>
+    <p>Q. What is Captain America's shield made of?</p>
+    <div class="options">
+      <button class="btn" onclick="checkAnswer(this, false)">Adamantium</button>
+      <button class="btn" onclick="checkAnswer(this, true)">Vibranium</button>
+      <button class="btn" onclick="checkAnswer(this, false)">Titanium</button>
+      <button class="btn" onclick="checkAnswer(this, false)">Carbon Fiber</button>
+    </div>
+    <p claclass="quizFeedback"></p>
+    <p>Q. What is the real name of Iron Man?</p>
+    <div class="options">
+            <button class="btn" onclick="checkAnswer(this, true)">Tony Stark</button>
+          <button class="btn" onclick="checkAnswer(this, false)">Steve Rogers</button>
+          <button class="btn" onclick="checkAnswer(this, false)">Bruce Banner</button>
+          <button class="btn" onclick="checkAnswer(this, false)">Clint Barton</button>
+    </div>
+    <p class="quizFeedback"></p>    
+    <p>Q. Who is the king of Wakanda?</p>
+<div class="options">
+  <button class="btn" onclick="checkAnswer(this, true)">T'Challa</button>
+  <button class="btn" onclick="checkAnswer(this, false)">M'Baku</button>
+  <button class="btn" onclick="checkAnswer(this, false)">Killmonger</button>
+  <button class="btn" onclick="checkAnswer(this, false)">Falcon</button>
+</div>
+<p class="quizFeedback"></p>
+     <p>Q. Which Infinity Stone does Vision have?</p>
+<div class="options">
+  <button class="btn" onclick="checkAnswer(this, false)">Space Stone</button>
+  <button class="btn" onclick="checkAnswer(this, false)">Reality Stone</button>
+  <button class="btn" onclick="checkAnswer(this, true)">Mind Stone</button>
+  <button class="btn" onclick="checkAnswer(this, false)">Time Stone</button>
+</div>
+<p class="quizFeedback"></p>
+<p>Q. What is Spider-Man's aunt's name?</p>
+<div class="options">
+  <button class="btn" onclick="checkAnswer(this, false)">Aunt June</button>
+  <button class="btn" onclick="checkAnswer(this, true)">Aunt May</button>
+  <button class="btn" onclick="checkAnswer(this, false)">Aunt Mary</button>
+  <button class="btn" onclick="checkAnswer(this, false)">Aunt Jane</button>
+</div>
+<p class="quizFeedback"></p>
+
+</div>
+  </section>
+
+  <section class="feedback">
+    <h2>💬 Share Your Marvel Moments</h2>
+    <div class="f">
+        <textarea placeholder="Tell us your favorite Marvel scene or memory..."></textarea>
+    </div>
+    <button>Submit</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Marvel Fan Zone | Designed with ❤️ by Fans</p>
+  </footer>
+
+  <script src="script@fanpage.js"></script>
+</body>
+
+</html>
