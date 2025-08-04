@@ -225,7 +225,8 @@ body {
     <p>© 2025 Marvel Fan Zone | Designed with ❤️ by Fans</p>
   </footer>
 
-  <script> function submitPoll() {
+  <script> 
+    function submitPoll() {
   const choice = document.querySelector('input[name="character"]:checked');
   const result = document.getElementById("pollResult");
   if (choice) {
@@ -270,7 +271,7 @@ function checkAnswer(button, isCorrect) {
     ? "Correct! Vibranium is the right answer."
     : "Oops! That's not right.";
 const feedbacks = document.querySelectorAll('.quizFeedback');
-/script>
+</script>
 </body>
 
 </html>
