@@ -225,8 +225,54 @@ body {
     <p>© 2025 Marvel Fan Zone | Designed with ❤️ by Fans</p>
   </footer>
 
-  <script src="script@fanpage.js"></script>
+  <script> function submitPoll() {
+  const choice = document.querySelector('input[name="character"]:checked');
+  const result = document.getElementById("pollResult");
+  if (choice) {
+    result.textContent = `You voted for ${choice.value}!`;
+  } else {
+    result.textContent = "Please select an option before voting.";
+  }
+}
+function checkAnswer(button, isCorrect) {
+  const optionsContainer = button.parentElement;
+  
+  if (optionsContainer.classList.contains('answered')) return;
+
+  optionsContainer.classList.add('answered');
+
+  const buttons = optionsContainer.querySelectorAll('button');
+
+  buttons.forEach(btn => {
+    btn.disabled = true; 
+    if (btn === button && isCorrect) {
+      btn.style.backgroundColor = 'green';
+      btn.style.color = 'white';
+    } else if (btn === button && !isCorrect) {
+      btn.style.backgroundColor = 'red';
+      btn.style.color = 'white';
+    }
+  });
+
+  
+  if (!isCorrect) {
+    buttons.forEach(btn => {
+      if (btn.getAttribute('onclick')?.includes('true')) {
+        btn.style.backgroundColor = 'green';
+        btn.style.color = 'white';
+      }
+    });
+  }
+}
+  button.classList.add(isCorrect ? "correct" : "wrong");
+  const feedback = document.getElementById("quizFeedback");
+  feedback.textContent = isCorrect
+    ? "Correct! Vibranium is the right answer."
+    : "Oops! That's not right.";
+const feedbacks = document.querySelectorAll('.quizFeedback');
+/script>
 </body>
 
 </html>
+
 
