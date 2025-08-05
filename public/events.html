@@ -544,12 +544,12 @@
     <script>
         document.getElementById('main_nav_bar').getElementsByTagName('img')[0].addEventListener('click',function(){
             window.location.href='/';
-        })
+        });
         const public_api_key_1 = '25270e8a7fa745900ecb3311233bb2dd';
         let ts = '';
         let hash = '';
         window.addEventListener('DOMContentLoaded', function () {
-            fetch('https://algozenith-server.onrender.com/api_keys')
+            fetch('https://algozenith-3-0.onrender.com/api_keys')
                 .then(res => res.json())
                 .then((data) => {
                     ts = data.ts1;
@@ -680,7 +680,7 @@
                 document.getElementById('background').style.zIndex = '-2';
                 document.getElementById('background').style.opacity = '0.5';
                 const userInput = this.getElementsByTagName('input')[0].value.trim();
-                fetch('https://algozenith-server.onrender.com/api_keys')
+                fetch('https://algozenith-3-0.onrender.com/api_keys')
                     .then(res => res.json())
                     .then((data) => {
                         ts = data.ts1;
@@ -777,5 +777,6 @@
         });
     </script>
 </body>
+
 
 </html>
