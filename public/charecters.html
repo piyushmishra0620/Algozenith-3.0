@@ -281,7 +281,7 @@
     let hash = '';
 
     window.addEventListener('DOMContentLoaded', function () {
-        fetch('https://algozenith-server.onrender.com/api_keys')
+        fetch('https://algozenith-3-0.onrender.com/api_keys')
             .then(res => res.json())
             .then((data) => {
                 ts = data.ts3;
@@ -359,7 +359,7 @@
         document.getElementById('background').style.zIndex = '-2';
         document.getElementById('background').style.opacity = '0.5';
 
-        fetch('https://algozenith-server.onrender.com/api_keys')
+        fetch('https://algozenith-3-0.onrender.com/api_keys')
             .then(res => res.json())
             .then((data) => {
                 ts = data.ts3;
@@ -413,3 +413,4 @@
 </script>
 
 </html>
+
