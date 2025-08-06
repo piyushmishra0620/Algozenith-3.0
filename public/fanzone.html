@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marvel Fan Zone</title>
+  <title>MarvelPedia</title>
   <style>
     body {
   margin: 0;
@@ -226,6 +226,9 @@ body {
   </footer>
 
   <script> 
+    document.getElementById('icon').addEventListener('click',function(){
+      window.location.href='/';
+    });
     function submitPoll() {
   const choice = document.querySelector('input[name="character"]:checked');
   const result = document.getElementById("pollResult");
