@@ -76,4 +76,5 @@ A Marvel-Comics website featuring all characters, comics, stories, series and al
 
 ## 🌐 Deployment Link
 
+https://marvel-pedia-one.vercel.app/
 ---
