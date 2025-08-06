@@ -278,7 +278,7 @@
       background: radial-gradient(circle, #330a0a, #101010);
     }
   </style>
-  <title>MARVEL-API</title>
+  <title>MarvelPedia</title>
 </head>
 
 <body>
@@ -322,7 +322,7 @@
         <button id="events">EVENTS</button>
         <button id="characters">CHARACTERS</button>
         <button id="comics">COMICS</button>
-        <button id="fanZone">FAN-ZONE</button>
+        <button id="fanzoneBtn">FAN-ZONE</button>
       </div>
     </div>
   </main>
@@ -365,7 +365,7 @@
 
 
     const loaderOverlay = document.getElementById('loader-overlay');
-    const clickableElements = document.querySelectorAll('.nav-bar a, .dropdown_menu a, .box button');
+    const clickableElements = document.querySelectorAll('.nav-bar a, .dropdown_menu a');
     function showLoader(event) {
       event.preventDefault();
       document.body.classList.add('loading-active');
@@ -379,7 +379,7 @@
     document.getElementById('fanzone').addEventListener('click', function (e) {
       showLoader(e);window.location.href = '/fan-zone';
     });
-    document.getElementById('fanZone').addEventListener('click', function (e) {
+    document.getElementById('fanZzoneBtn').addEventListener('click', function (e) {
       showLoader(e);window.location.href = '/fan-zone';
     });
     document.getElementById('fanzoneDM').addEventListener('click', function (e) {
@@ -422,5 +422,6 @@
 </body>
 
 </html>
+
 
 
